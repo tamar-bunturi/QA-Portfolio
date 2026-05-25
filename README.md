@@ -1,4 +1,4 @@
-# QA Portfolio - Tammy Bunturi
+# QA Portfolio - Tamar Bunturi
 
 ## About Me
 QA Engineer with hands-on experience in manual testing.
