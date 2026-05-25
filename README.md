@@ -7,16 +7,16 @@ Currently exploring automation testing using **Java + Selenium WebDriver**.
 ---
 
 ## 🛠️ Tech Stack
-- **Manual Testing** — test cases, bug reports, regression, smoke testing
-- **Automation** — Java, Selenium WebDriver
-- **Tools** — Jira, TestRail, Postman, Chrome DevTools
-- **Version Control** — Git & GitHub
+- **Manual Testing** - test cases, bug reports, regression, smoke testing
+- **Automation** - Java, Selenium WebDriver
+- **Tools** - Jira, TestRail, Postman, Chrome DevTools
+- **Version Control** - Git & GitHub
 
 ---
 
 ## 📁 Projects
 
-### 1. Selenium WebDriver — Login Test (saucedemo.com)
+### 1. Selenium WebDriver - Login Test (saucedemo.com)
 > Automated login scenarios using Java + Selenium
 - Valid login
 - Invalid login
