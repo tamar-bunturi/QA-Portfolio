@@ -1,0 +1,352 @@
+{
+  "info": {
+    "_postman_id": "939a9145-929c-4ed8-aae4-28348228ec44",
+    "name": "JSONPlaceholder - API Testing",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53829386",
+    "_collection_link": "https://go.postman.co/collection/53829386-939a9145-929c-4ed8-aae4-28348228ec44?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET - Get All Users",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response is an array\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData).to.be.an(\"array\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response contains 10 users\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.length).to.eql(10);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Each user has required fields\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    jsonData.forEach(function(user) {\r",
+              "        pm.expect(user).to.have.property(\"id\");\r",
+              "        pm.expect(user).to.have.property(\"name\");\r",
+              "        pm.expect(user).to.have.property(\"email\");\r",
+              "        pm.expect(user).to.have.property(\"username\");\r",
+              "    });\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 2000ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET - Get Single User",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"User ID is 1\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.id).to.eql(1);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"User has required fields\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData).to.have.property(\"id\");\r",
+              "    pm.expect(jsonData).to.have.property(\"name\");\r",
+              "    pm.expect(jsonData).to.have.property(\"email\");\r",
+              "    pm.expect(jsonData).to.have.property(\"username\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 2000ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST - Create New User",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"User is created with correct name\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.name).to.eql(\"Tammy Bunturi\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"User is created with correct email\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.email).to.eql(\"tammy@test.com\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response contains new user ID\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData).to.have.property(\"id\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 2000ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Tammy Bunturi\",\r\n    \"username\": \"tammy\",\r\n    \"email\": \"tammy@test.com\",\r\n    \"phone\": \"555205924\",\r\n    \"website\": \"tammy.dev.test\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT - Update User",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"User name is updated correctly\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.name).to.eql(\"Tammy Bunturi Updated\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"User email is updated correctly\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.email).to.eql(\"tammy.updated@test.com\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"User ID remains the same\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.id).to.eql(1);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 2000ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Tammy Bunturi Updated\",\r\n    \"username\": \"tammy\",\r\n    \"email\": \"tammy.updated@test.com\",\r\n    \"phone\": \"555-9999\",\r\n    \"website\": \"tammy.dev\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/11",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "11"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE - Delete User",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response body is empty object\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData).to.eql({});\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 2000ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Tammy Bunturi Updated\",\r\n    \"username\": \"tammy\",\r\n    \"email\": \"tammy.updated@test.com\",\r\n    \"phone\": \"555-9999\",\r\n    \"website\": \"tammy.dev\"\r\n}"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET - Non Existing User (404)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 404\", function () {\r",
+              "    pm.response.to.have.status(404);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response body is empty object\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData).to.eql({});\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 2000ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Tammy Bunturi Updated\",\r\n    \"username\": \"tammy\",\r\n    \"email\": \"tammy.updated@test.com\",\r\n    \"phone\": \"555-9999\",\r\n    \"website\": \"tammy.dev\"\r\n}"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/999",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "999"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
