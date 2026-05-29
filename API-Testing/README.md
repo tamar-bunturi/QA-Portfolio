@@ -52,7 +52,8 @@ chaining, and negative testing scenarios.
 2. Open Postman
 3. Click **Import**
 4. Select the downloaded file
-5. Run the collection and see all tests pass
+5. Replace `YOUR_API_KEY_HERE` with your free API key from reqres.in
+6. Run the collection and see all tests pass
 
 ---
 
