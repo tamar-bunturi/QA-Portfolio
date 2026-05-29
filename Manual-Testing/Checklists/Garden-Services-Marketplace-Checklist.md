@@ -5,6 +5,8 @@
 > All checklists documented for portfolio purposes only.
 
 ---
+## App Overview
+A web-based marketplace platform connecting customers with gardening and yard care service providers. Features include user registration, service listings, booking system, and multilingual support.
 
 ## 1. User Registration & Login
 
