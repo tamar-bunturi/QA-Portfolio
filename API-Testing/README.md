@@ -28,22 +28,22 @@ chaining, and negative testing scenarios.
 
 | Method | Endpoint | Description |
 |---|---|---|
-| POST | /api/register | Register new user — saves token |
-| POST | /api/login | Login user — saves auth token |
+| POST | /api/register | Register new user - saves token |
+| POST | /api/login | Login user - saves auth token |
 | GET | /api/users | Get all users |
 | GET | /api/users/2 | Get single user |
-| POST | /api/users | Create user — saves user ID |
-| PUT | /api/users/{{userId}} | Update user — uses chained ID |
-| DELETE | /api/users/{{userId}} | Delete user — uses chained ID |
-| POST | /api/register | Missing password — negative test |
-| POST | /api/login | Wrong password — negative test |
+| POST | /api/users | Create user - saves user ID |
+| PUT | /api/users/{{userId}} | Update user - uses chained ID |
+| DELETE | /api/users/{{userId}} | Delete user - uses chained ID |
+| POST | /api/register | Missing password - negative test |
+| POST | /api/login | Wrong password - negative test |
 
 **Total Tests:** 34 tests - all passing ✅
 
 **Key concepts demonstrated:**
-- 🔗 Request chaining — token and ID saved and reused automatically
-- 🔐 Authentication testing
-- ❌ Negative testing — error handling validation
+- Request chaining - token and ID saved and reused automatically
+- Authentication testing
+- Negative testing - error handling validation
 
 ---
 
