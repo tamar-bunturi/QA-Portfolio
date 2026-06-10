@@ -2,6 +2,25 @@
 
 This folder contains certifications that support my professional experience in Quality Assurance, Project Management, and Business Analysis.
 
+
+### ISTQB® Certified Tester Foundation Level (CTFL) v4.0
+
+Successfully passed the internationally recognized ISTQB® Certified Tester Foundation Level (CTFL) v4.0 certification, demonstrating knowledge in:
+
+• Software Testing Fundamentals  
+• Test Analysis & Design Techniques  
+• Static Testing  
+• Test Management  
+• Risk-Based Testing  
+• Configuration Management  
+• Defect Management  
+• Test Tools & Automation Concepts  
+• SDLC & STLC Best Practices
+
+Certificate: ISTQB® Certified Tester Foundation Level (CTFL) v4.0
+
+---
+
 ## QA Manual Tester Certificate
 
 Successfully completed training in Manual Software Testing, covering:
