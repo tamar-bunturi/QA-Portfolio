@@ -1,4 +1,4 @@
-## Dating Application - QA Testing Portfolio
+## Dating Application - Bug Reports
 
 ⚠️ **NDA Notice:** This project is covered by a Non-Disclosure Agreement. Company name, URLs, screenshots containing sensitive information, and other confidential details have been intentionally omitted. All bugs are documented for portfolio purposes only and do not disclose proprietary business information.
 
