@@ -1,20 +1,30 @@
-## Gamified Reading Platform - Bug Reports
+# Gamified Learning Platform - Bug Reports
 
-⚠️ **NDA Notice:** This project is covered by a Non-Disclosure Agreement. Company name, URLs, screenshots containing sensitive information, and other confidential details have been intentionally omitted. All bugs are documented for portfolio purposes only and do not disclose proprietary business information.
+> ⚠️ NDA Notice: This project is covered by a Non-Disclosure Agreement.
+> Company name, URLs and sensitive details are intentionally omitted.
+> All bugs documented for portfolio purposes only.
 
+---
 
-## Project Overview
+## App Overview
+A web-based interactive storytelling platform that transforms
+traditional reading into an immersive digital experience. Users
+can explore interactive books, make story-driven decisions, and
+engage with dynamic content that adapts based on their choices.
+The platform combines literature, gamification, and educational
+elements - providing personalized reading journeys where
+decisions influence story progression, characters, and outcomes.
+The application also includes multilingual support, content
+management features, and user profile functionality.
 
-This project involved testing a web-based interactive storytelling platform that transforms traditional reading into an immersive digital experience. The platform allows users to explore interactive books, make story-driven decisions, engage with dynamic content, and participate in a personalized reading journey.
+---
 
-The application combines literature, gamification, and educational elements, providing users with interactive narratives where choices influence story progression, characters, and outcomes. The platform also includes multilingual support, content management features, user profiles, and responsive web functionality.
+## Platform
+- Web Application
 
-The objective of testing was to evaluate overall application quality, identify functional and usability issues, validate user flows, and ensure a consistent experience across different sections of the platform.
+---
 
-## Scope of Testing
-
-The testing covered the following areas:
-
+## Testing Focus Areas
 - Website Navigation
 - Responsive Design Validation
 - UI/UX Testing
@@ -22,10 +32,7 @@ The testing covered the following areas:
 - Exploratory Testing
 - Language Switching Functionality
 - Interactive Content & Story Navigation
-- User Interface Consistency
 - Forms & Contact Features
 - Header & Footer Components
-- Accessibility & Usability Validation
 - Cross-Browser Testing
 - Visual Regression Checks
-- Defect Reporting & Documentation
