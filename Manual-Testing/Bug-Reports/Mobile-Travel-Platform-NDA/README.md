@@ -1,4 +1,4 @@
-## Mobile Travel Social App Bug Reports
+## Mobile Travel Social App - Bug Reports
 
 > ⚠️ NDA Notice: This project is covered by a Non-Disclosure Agreement.
 > Company name, URLs and sensitive details are intentionally omitted.
