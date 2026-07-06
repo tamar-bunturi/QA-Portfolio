@@ -1,4 +1,4 @@
-# AI-Powered Document Editor — Bug Reports
+# AI-Powered Document Editor - Bug Reports
 
 > ⚠️ NDA Notice: This project is covered by a Non-Disclosure Agreement.
 > Company name, URLs and sensitive details are intentionally omitted.
